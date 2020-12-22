@@ -1,0 +1,8 @@
+dusri-naukari-env
+
+__pycache__
+
+.idea
+*.iml
+
+.env
