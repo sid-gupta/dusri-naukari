@@ -1,6 +1,5 @@
 import os
 from datetime import timedelta
-import uuid
 
 basedir = os.path.abspath(os.path.dirname(__package__))
 
