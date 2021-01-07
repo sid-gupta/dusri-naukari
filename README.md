@@ -4,3 +4,4 @@
 `docker pull postgres`
 3. Run the image (update password below)<br>
 `docker run -d --name dusri-naukari-db -p 5432:5432 -e POSTGRES_PASSWORD=<some-password> postgres`
+4. Install chromedriver for selenium testing. Just download and put it on system path.

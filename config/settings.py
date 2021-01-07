@@ -19,6 +19,12 @@ class DevelopmentConfig:
     WTF_CSRF_TIME_LIMIT = None
 
 
+class TestingConfig(DevelopmentConfig):
+    TESTING = True
+    WTF_CSRF_ENABLED = False
+    SQLALCHEMY_DATABASE_URI = os.getenv('TEST_DATABASE_URL')
+
+
 class ProductionConfig(DevelopmentConfig):
     SECRET_KEY = 'production ready secret here'
     DEBUG = False
@@ -28,5 +34,6 @@ class ProductionConfig(DevelopmentConfig):
 config = {
     'development': DevelopmentConfig,
     'production': ProductionConfig,
-    'default': DevelopmentConfig
+    'default': DevelopmentConfig,
+    'testing': TestingConfig
 }
