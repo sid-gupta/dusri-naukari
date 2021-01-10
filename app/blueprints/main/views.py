@@ -4,5 +4,8 @@ bp = Blueprint('main', __name__, template_folder='templates')
 
 
 @bp.route('/')
-def home():
-    return render_template('home.html')
+def index():
+    return render_template('index.html')
+
+
+from .views_pages import *
